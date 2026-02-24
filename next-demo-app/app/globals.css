@@ -69,7 +69,6 @@ body {
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 0.75rem;
-  border-radius: 4px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -83,6 +82,12 @@ body {
 .navbar a:hover {
   background-color: var(--hover-bg);
   color: var(--accent);
+}
+
+.navbar a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
 }
 
 /* Main Content */
@@ -129,7 +134,7 @@ a {
 
 a:hover {
   opacity: 0.8;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 /* Lists */
