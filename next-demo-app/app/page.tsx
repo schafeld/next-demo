@@ -1,13 +1,23 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <Link href="/about" className="text-blue-500 underline">
-        Go to About Page
-      </Link>
+      <h1 className="text-3xl font-bold underline">Welcome to the Homepage</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>
+        <Link href="/about" className="text-blue-500 underline">
+          Go to About Page
+        </Link>        
+      </p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <ol>
+        <li><Link href="/posts/1" className="text-blue-500 underline">Post 1</Link></li>
+        <li><Link href="/posts/2" className="text-blue-500 underline">Post 2</Link></li>
+        <li><Link href="/posts/3" className="text-blue-500 underline">Post 3</Link></li>
+      </ol>
     </main>
   );
 }

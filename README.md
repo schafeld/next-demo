@@ -15,3 +15,5 @@ npx create-next-app@latest next-demo-app --yes
 cd next-demo-app
 npm run dev
 ```
+
+continue course at: https://www.coursera.org/learn/introduction-to-next-js/supplement/JgWxl/getting-started-with-next-js
