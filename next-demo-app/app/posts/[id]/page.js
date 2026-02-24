@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { posts } from "../../data/posts";
+import styles from "./Post.module.css";
 
 export default async function Post({ params }) {
     const { id } = await params;
@@ -7,11 +8,11 @@ export default async function Post({ params }) {
 
     if (!post) {
         return (
-            <main>
-                <h1 className="text-3xl font-bold underline">Post Not Found</h1>
-                <p>The post you are looking for does not exist.</p>
+            <main className={styles.container}>
+                <h1 className={styles.title}>Post Not Found</h1>
+                <p className={styles.content}>The post you are looking for does not exist.</p>
                 <p>
-                    <Link href="/" className="text-blue-500 underline">
+                    <Link href="/" className={styles.link}>
                         Go back to Home Page
                     </Link>
                 </p>
@@ -20,12 +21,12 @@ export default async function Post({ params }) {
     }
 
     return (
-        <main>
-            <h1 className="text-3xl font-bold underline">{post.title}</h1>
-            <p>{post.content}</p>
+        <main className={styles.container}>
+            <h1 className={styles.title}>{post.title}</h1>
+            <p className={styles.content}>{post.content}</p>
 
             <p>
-                <Link href="/" className="text-blue-500 underline">
+                <Link href="/" className={styles.link}>
                     Go back to Home Page
                 </Link>
             </p>
