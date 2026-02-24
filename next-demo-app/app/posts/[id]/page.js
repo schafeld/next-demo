@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { posts } from "../../data/posts";
 import styles from "./Post.module.css";
+import Layout from "../../navigation";
 
 export default async function Post({ params }) {
     const { id } = await params;
@@ -8,7 +9,7 @@ export default async function Post({ params }) {
 
     if (!post) {
         return (
-            <main className={styles.container}>
+            <Layout>
                 <h1 className={styles.title}>Post Not Found</h1>
                 <p className={styles.content}>The post you are looking for does not exist.</p>
                 <p>
@@ -16,12 +17,12 @@ export default async function Post({ params }) {
                         Go back to Home Page
                     </Link>
                 </p>
-            </main>
+            </Layout>
         );
     }
 
     return (
-        <main className={styles.container}>
+        <Layout>
             <h1 className={styles.title}>{post.title}</h1>
             <p className={styles.content}>{post.content}</p>
 
@@ -30,6 +31,6 @@ export default async function Post({ params }) {
                     Go back to Home Page
                 </Link>
             </p>
-        </main>
+        </Layout>
     );
 }

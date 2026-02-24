@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Layout from "./navigation";
 
 export default function Home() {
   return (
-    <main>
+    <Layout>
       <h1 className="text-3xl font-bold underline">Welcome to the Homepage</h1>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -18,6 +19,6 @@ export default function Home() {
         <li><Link href="/posts/2" className="text-blue-500 underline">Post 2</Link></li>
         <li><Link href="/posts/3" className="text-blue-500 underline">Post 3</Link></li>
       </ol>
-    </main>
+    </Layout>
   );
 }
