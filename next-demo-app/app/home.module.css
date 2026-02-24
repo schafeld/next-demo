@@ -1,0 +1,48 @@
+.intro {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.articlesGrid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.articleCard {
+  padding: 1.5rem;
+  background-color: var(--accent-light);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.articleCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.articleTitle {
+  margin-top: 0;
+}
+
+.articleMeta {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.readMoreLink {
+  font-weight: 500;
+}
+
+.aboutSection {
+  padding: 1.5rem;
+  background-color: var(--hover-bg);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.aboutSection h3 {
+  margin-top: 0;
+}

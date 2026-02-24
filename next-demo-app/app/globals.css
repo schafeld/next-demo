@@ -146,3 +146,16 @@ ol, ul {
 li {
   margin-bottom: 0.5rem;
 }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+}

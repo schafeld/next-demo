@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { posts } from "../../data/posts";
 import styles from "./Post.module.css";
-import Layout from "../../navigation";
 
 export default async function Post({ params }) {
     const { id } = await params;
@@ -12,7 +11,6 @@ export default async function Post({ params }) {
 
     if (!post) {
         return (
-            <Layout>
                 <div className={styles.notFound}>
                     <h1 className={styles.title}>Post Not Found</h1>
                     <p className={styles.content}>The post you are looking for does not exist.</p>
@@ -20,12 +18,10 @@ export default async function Post({ params }) {
                         ← Back to Home
                     </Link>
                 </div>
-            </Layout>
         );
     }
 
     return (
-        <Layout>
             <article className={styles.container}>
                 <h1 className={styles.title}>{post.title}</h1>
                 <div className={styles.meta}>
@@ -68,7 +64,7 @@ export default async function Post({ params }) {
                 </div>
 
                 {/* Navigation between posts */}
-                <nav style={{ display: 'flex', justifyContent: 'space-between', marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid var(--border-color)' }}>
+                <nav className={styles.postNav}>
                     {previousPost ? (
                         <Link href={`/posts/${previousPost.id}`} className={styles.link}>
                             ← {previousPost.title}
@@ -88,6 +84,5 @@ export default async function Post({ params }) {
                     )}
                 </nav>
             </article>
-        </Layout>
-    );
+        );
 }
