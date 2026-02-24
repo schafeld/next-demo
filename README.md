@@ -16,4 +16,4 @@ cd next-demo-app
 npm run dev
 ```
 
-continue course at: https://www.coursera.org/learn/introduction-to-next-js/supplement/JgWxl/getting-started-with-next-js
+continue course at: https://www.coursera.org/learn/introduction-to-next-js/lecture/g6fCE/adding-navigation-with-next-js
